@@ -159,7 +159,7 @@ nav {
 }
 
 .presentation-box h1 {
-    font-size: 2.8rem;
+    font-size: 6vw;
     font-weight: 800;
     color: var(--blue-color);
     text-align: center;
@@ -203,9 +203,31 @@ nav {
     width: auto;
     height: 56px;
     padding: 0 16px;
-    border-left: solid 10px var(--dark-color);
+    border-left: solid 10px var(--blue-color);
     display: flex;
     align-items: flex-end;
+    color: var(--black-color);
+}
+
+.section-title span {
+    color: var(--blue-color);
+}
+
+.inverse {
+    border-left: solid 10px var(--black-color);
+    color: var(--white-color);
+}
+
+.inverse span {
+    color: var(--black-color);
+}
+
+.inverse-contact{
+    color: var(--white-color);
+}
+
+.inverse-contact span{
+    color: var(--blue-color);
 }
 
 .about-container {
@@ -258,17 +280,153 @@ nav {
     margin-bottom: 12px;
 }
 
+/*SKILLS STYLE*/
+
 .skills {
     width: 100%;
-    height: 100vh;
-    background-color: green;
+    background-color: var(--blue-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.skills-container {
+    width: 100%;
+    max-width: 1280px;
+    padding: 8px 16px;
+}
+
+.skills-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.skill-box {
+    width: 30%;
+    height: auto;
+    background-color: #f5f5f5;
+    margin: 3px;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.skill-box img {
+    width: 100%;
+    height: auto;
+}
+
+/*PROJECTS STYLE*/
 .projects {
     width: 100%;
-    height: 100vh;
-    background-color: black;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.projects-message {
+    width: 100%;
+    max-width: 1280px;
+    padding: 8px 16px;
+    color: var(--black-color);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.projects-container {
+    width: 100%;
+    max-width: 1280px;
+}
+
+.projects-list {
+    width: 100%;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-box {
+    width: 100%;
+    border: solid 1px #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    padding: 12px 12px 24px;
+    margin: 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.project-cover {
+    width: 100%;
+    height: auto;
+}
+
+.project-name {
+    text-align: center;
+    padding: 8px 0;
+    color: var(--black-color);
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black-color);
+    padding-bottom: 16px;
+}
+
+.project-box button {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.demo-button {
+    background-color: var(--blue-color);
+    border: solid 1px var(--blue-color);
+    border-radius: 5px;
+    color: var(--white-color);
+}
+
+.git-button {
+    background-color: var(--black-color);
+    border: solid 1px var(--black-color);
+    border-radius: 5px;
+    color: var(--white-color);
+}
+
+.projects-repository {
+    width: 100%;
+    max-width: 1280px;
+    height: 100px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-repository button {
+    width: 250px;
+    height: 36px;
+    border: solid 2px var(--black-color);
+    border-radius: 5px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-size: 16px;
+    font-weight: 800;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+/*CONTACT STYLE*/
 
 .contact {
     width: 100%;
@@ -278,6 +436,7 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
 
 .contact-message {
     width: 100%;
@@ -358,6 +517,16 @@ footer {
     background-color: var(--dark-color);
 }
 
+@media screen and (min-width: 640px) {
+    .project-box {
+        width: 47%;
+    }
+
+    .skill-box {
+        width: 20%;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     nav {
         display: flex;
@@ -386,4 +555,22 @@ footer {
         padding: 16px;
     }
 
+    .project-box {
+        width: 30%;
+    }
+
+    .skill-box {
+        width: 12%;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    .project-box {
+        width: 24%;
+    }
+
+    .skill-box {
+        width: 6%;
+    }
 }
